@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>WorldBot — NLP Chatbot</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <div class="app">
+
+    <!-- HEADER -->
+    <div class="header">
+      <div class="header-dot"></div>
+      <span class="header-title">🌐 WorldBot</span>
+      <span class="header-sub">General-Purpose NLP Chatbot</span>
+      <select class="lang-select" id="langSelect">
+        <option value="en-US">🇺🇸 English</option>
+        <option value="hi-IN">🇮🇳 Hindi</option>
+        <option value="es-ES">🇪🇸 Spanish</option>
+        <option value="fr-FR">🇫🇷 French</option>
+        <option value="ar-SA">🇸🇦 Arabic</option>
+        <option value="zh-CN">🇨🇳 Chinese</option>
+        <option value="de-DE">🇩🇪 German</option>
+        <option value="pt-BR">🇧🇷 Portuguese</option>
+      </select>
+    </div>
+
+    <!-- NLP PIPELINE BAR -->
+    <div class="pipeline">
+      <div class="pipe-step">
+        <div class="pipe-label">INPUT</div>
+        <div class="pipe-badge" id="pipe-input">Text / Voice</div>
+      </div>
+      <div class="pipe-arrow">→</div>
+      <div class="pipe-step">
+        <div class="pipe-label">NLU</div>
+        <div class="pipe-badge" id="pipe-nlu">Intent &amp; Entity</div>
+      </div>
+      <div class="pipe-arrow">→</div>
+      <div class="pipe-step">
+        <div class="pipe-label">PROCESSING</div>
+        <div class="pipe-badge" id="pipe-proc">Context Manager</div>
+      </div>
+      <div class="pipe-arrow">→</div>
+      <div class="pipe-step">
+        <div class="pipe-label">NLG</div>
+        <div class="pipe-badge" id="pipe-nlg">Claude API</div>
+      </div>
+      <div class="pipe-arrow">→</div>
+      <div class="pipe-step">
+        <div class="pipe-label">NLE</div>
+        <div class="pipe-badge" id="pipe-nle">Evaluation</div>
+      </div>
+      <div class="pipe-arrow">→</div>
+      <div class="pipe-step">
+        <div class="pipe-label">OUTPUT</div>
+        <div class="pipe-badge" id="pipe-output">Text / TTS</div>
+      </div>
+    </div>
+
+    <!-- MESSAGES -->
+    <div class="messages" id="messages">
+      <div class="msg bot">
+        <div class="avatar bot">W</div>
+        <div class="bubble bot">
+          Hello! I'm <strong>WorldBot</strong> — ask me anything on any topic, in any language. Type or use the 🎤 mic to speak!
+          <div class="nlp-info">
+            <span class="nlp-tag tag-intent">intent: greeting</span>
+            <span class="nlp-tag tag-sentiment">sentiment: positive</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- INPUT AREA -->
+    <div class="input-area">
+      <div class="suggestions" id="suggestions">
+        <span class="suggestion" onclick="fillSuggestion(this)">What is machine learning?</span>
+        <span class="suggestion" onclick="fillSuggestion(this)">Capital of Japan?</span>
+        <span class="suggestion" onclick="fillSuggestion(this)">Tell me a fun fact</span>
+        <span class="suggestion" onclick="fillSuggestion(this)">How does NLP work?</span>
+      </div>
+      <div class="input-row">
+        <button class="btn mic" id="micBtn" onclick="toggleVoice()" title="Click to speak">🎤</button>
+        <input
+          class="text-input"
+          id="textInput"
+          placeholder="Ask anything, in any language..."
+          onkeydown="if(event.key==='Enter') sendMessage()"
+        />
+        <button class="btn speak" id="speakBtn" onclick="toggleTTS()" title="Toggle voice output">🔊</button>
+        <button class="btn send" onclick="sendMessage()">Send ➤</button>
+      </div>
+      <div class="status-bar" id="statusBar">Ready — type or tap 🎤 to speak</div>
+    </div>
+
+  </div>
+
+  <script src="js/config.js"></script>
+  <script src="js/nlp.js"></script>
+  <script src="js/voice.js"></script>
+  <script src="js/chat.js"></script>
+  <script src="js/app.js"></script>
+
+</body>
+</html>
