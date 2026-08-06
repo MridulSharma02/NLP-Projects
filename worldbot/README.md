@@ -23,6 +23,12 @@ worldbot/
 ```
 
 ---
+![WorldBot Screenshot](screenshot.png)
+
+
+```
+
+```
 
 ## 🚀 Setup (3 steps)
 
