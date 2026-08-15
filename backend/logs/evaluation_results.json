@@ -1,0 +1,802 @@
+[
+  {
+    "sentence_a": "This church choir sings to the masses as they sing joyous songs from the book at a church.",
+    "sentence_b": "The church has cracks in the ceiling.",
+    "true_label": "Unrelated",
+    "predicted_label": "Unrelated",
+    "confidence": 0.9881,
+    "correct": true
+  },
+  {
+    "sentence_a": "This church choir sings to the masses as they sing joyous songs from the book at a church.",
+    "sentence_b": "The church is filled with song.",
+    "true_label": "Consistent",
+    "predicted_label": "Consistent",
+    "confidence": 0.9642,
+    "correct": true
+  },
+  {
+    "sentence_a": "This church choir sings to the masses as they sing joyous songs from the book at a church.",
+    "sentence_b": "A choir singing at a baseball game.",
+    "true_label": "Contradiction",
+    "predicted_label": "Contradiction",
+    "confidence": 0.9995,
+    "correct": true
+  },
+  {
+    "sentence_a": "A woman with a green headscarf, blue shirt and a very big grin.",
+    "sentence_b": "The woman is young.",
+    "true_label": "Unrelated",
+    "predicted_label": "Unrelated",
+    "confidence": 0.9974,
+    "correct": true
+  },
+  {
+    "sentence_a": "A woman with a green headscarf, blue shirt and a very big grin.",
+    "sentence_b": "The woman is very happy.",
+    "true_label": "Consistent",
+    "predicted_label": "Consistent",
+    "confidence": 0.6407,
+    "correct": true
+  },
+  {
+    "sentence_a": "A woman with a green headscarf, blue shirt and a very big grin.",
+    "sentence_b": "The woman has been shot.",
+    "true_label": "Contradiction",
+    "predicted_label": "Contradiction",
+    "confidence": 0.9908,
+    "correct": true
+  },
+  {
+    "sentence_a": "An old man with a package poses in front of an advertisement.",
+    "sentence_b": "A man poses in front of an ad.",
+    "true_label": "Consistent",
+    "predicted_label": "Consistent",
+    "confidence": 0.9949,
+    "correct": true
+  },
+  {
+    "sentence_a": "An old man with a package poses in front of an advertisement.",
+    "sentence_b": "A man poses in front of an ad for beer.",
+    "true_label": "Unrelated",
+    "predicted_label": "Unrelated",
+    "confidence": 0.9996,
+    "correct": true
+  },
+  {
+    "sentence_a": "An old man with a package poses in front of an advertisement.",
+    "sentence_b": "A man walks by an ad.",
+    "true_label": "Contradiction",
+    "predicted_label": "Contradiction",
+    "confidence": 0.9977,
+    "correct": true
+  },
+  {
+    "sentence_a": "A statue at a museum that no seems to be looking at.",
+    "sentence_b": "The statue is offensive and people are mad that it is on display.",
+    "true_label": "Unrelated",
+    "predicted_label": "Unrelated",
+    "confidence": 0.9958,
+    "correct": true
+  },
+  {
+    "sentence_a": "A statue at a museum that no seems to be looking at.",
+    "sentence_b": "There is a statue that not many people seem to be interested in.",
+    "true_label": "Consistent",
+    "predicted_label": "Consistent",
+    "confidence": 0.9837,
+    "correct": true
+  },
+  {
+    "sentence_a": "A statue at a museum that no seems to be looking at.",
+    "sentence_b": "Tons of people are gathered around the statue.",
+    "true_label": "Contradiction",
+    "predicted_label": "Contradiction",
+    "confidence": 0.9957,
+    "correct": true
+  },
+  {
+    "sentence_a": "A land rover is being driven across a river.",
+    "sentence_b": "A Land Rover is splashing water as it crosses a river.",
+    "true_label": "Consistent",
+    "predicted_label": "Unrelated",
+    "confidence": 0.9953,
+    "correct": false
+  },
+  {
+    "sentence_a": "A land rover is being driven across a river.",
+    "sentence_b": "A vehicle is crossing a river.",
+    "true_label": "Consistent",
+    "predicted_label": "Consistent",
+    "confidence": 0.9887,
+    "correct": true
+  },
+  {
+    "sentence_a": "A land rover is being driven across a river.",
+    "sentence_b": "A sedan is stuck in the middle of a river.",
+    "true_label": "Contradiction",
+    "predicted_label": "Contradiction",
+    "confidence": 0.9998,
+    "correct": true
+  },
+  {
+    "sentence_a": "A man playing an electric guitar on stage.",
+    "sentence_b": "A man playing banjo on the floor.",
+    "true_label": "Contradiction",
+    "predicted_label": "Contradiction",
+    "confidence": 0.9999,
+    "correct": true
+  },
+  {
+    "sentence_a": "A man playing an electric guitar on stage.",
+    "sentence_b": "A man playing guitar on stage.",
+    "true_label": "Consistent",
+    "predicted_label": "Consistent",
+    "confidence": 0.9706,
+    "correct": true
+  },
+  {
+    "sentence_a": "A man playing an electric guitar on stage.",
+    "sentence_b": "A man is performing for cash.",
+    "true_label": "Unrelated",
+    "predicted_label": "Unrelated",
+    "confidence": 0.9992,
+    "correct": true
+  },
+  {
+    "sentence_a": "A blond-haired doctor and her African american assistant looking threw new medical manuals.",
+    "sentence_b": "A doctor is looking at a book",
+    "true_label": "Consistent",
+    "predicted_label": "Consistent",
+    "confidence": 0.9699,
+    "correct": true
+  },
+  {
+    "sentence_a": "A blond-haired doctor and her African american assistant looking threw new medical manuals.",
+    "sentence_b": "A man is eating pb and j",
+    "true_label": "Contradiction",
+    "predicted_label": "Contradiction",
+    "confidence": 0.9998,
+    "correct": true
+  },
+  {
+    "sentence_a": "A blond-haired doctor and her African american assistant looking threw new medical manuals.",
+    "sentence_b": "A doctor is studying",
+    "true_label": "Unrelated",
+    "predicted_label": "Consistent",
+    "confidence": 0.8509,
+    "correct": false
+  },
+  {
+    "sentence_a": "One tan girl with a wool hat is running and leaning over an object, while another person in a wool hat is sitting on the ground.",
+    "sentence_b": "A boy runs into a wall",
+    "true_label": "Contradiction",
+    "predicted_label": "Contradiction",
+    "confidence": 0.9998,
+    "correct": true
+  },
+  {
+    "sentence_a": "One tan girl with a wool hat is running and leaning over an object, while another person in a wool hat is sitting on the ground.",
+    "sentence_b": "A tan girl runs leans over an object",
+    "true_label": "Consistent",
+    "predicted_label": "Consistent",
+    "confidence": 0.9669,
+    "correct": true
+  },
+  {
+    "sentence_a": "One tan girl with a wool hat is running and leaning over an object, while another person in a wool hat is sitting on the ground.",
+    "sentence_b": "A man watches his daughter leap",
+    "true_label": "Unrelated",
+    "predicted_label": "Contradiction",
+    "confidence": 0.9963,
+    "correct": false
+  },
+  {
+    "sentence_a": "A young family enjoys feeling ocean waves lap at their feet.",
+    "sentence_b": "A young man and woman take their child to the beach for the first time.",
+    "true_label": "Unrelated",
+    "predicted_label": "Unrelated",
+    "confidence": 0.9993,
+    "correct": true
+  },
+  {
+    "sentence_a": "A young family enjoys feeling ocean waves lap at their feet.",
+    "sentence_b": "A family is out at a restaurant.",
+    "true_label": "Contradiction",
+    "predicted_label": "Contradiction",
+    "confidence": 0.9998,
+    "correct": true
+  },
+  {
+    "sentence_a": "A young family enjoys feeling ocean waves lap at their feet.",
+    "sentence_b": "A family is at the beach.",
+    "true_label": "Consistent",
+    "predicted_label": "Consistent",
+    "confidence": 0.9609,
+    "correct": true
+  },
+  {
+    "sentence_a": "A couple walk hand in hand down a street.",
+    "sentence_b": "A couple is walking together.",
+    "true_label": "Consistent",
+    "predicted_label": "Consistent",
+    "confidence": 0.9686,
+    "correct": true
+  },
+  {
+    "sentence_a": "A couple walk hand in hand down a street.",
+    "sentence_b": "The couple is married.",
+    "true_label": "Unrelated",
+    "predicted_label": "Unrelated",
+    "confidence": 0.9989,
+    "correct": true
+  },
+  {
+    "sentence_a": "A couple walk hand in hand down a street.",
+    "sentence_b": "A couple is sitting on a bench.",
+    "true_label": "Contradiction",
+    "predicted_label": "Contradiction",
+    "confidence": 0.9999,
+    "correct": true
+  },
+  {
+    "sentence_a": "3 young man in hoods standing in the middle of a quiet street facing the camera.",
+    "sentence_b": "Three people sit by a busy street bareheaded.",
+    "true_label": "Contradiction",
+    "predicted_label": "Contradiction",
+    "confidence": 0.9995,
+    "correct": true
+  },
+  {
+    "sentence_a": "3 young man in hoods standing in the middle of a quiet street facing the camera.",
+    "sentence_b": "Three hood wearing people pose for a picture.",
+    "true_label": "Consistent",
+    "predicted_label": "Consistent",
+    "confidence": 0.9297,
+    "correct": true
+  },
+  {
+    "sentence_a": "3 young man in hoods standing in the middle of a quiet street facing the camera.",
+    "sentence_b": "Three hood wearing people stand in a street.",
+    "true_label": "Consistent",
+    "predicted_label": "Consistent",
+    "confidence": 0.989,
+    "correct": true
+  },
+  {
+    "sentence_a": "A man reads the paper in a bar with green lighting.",
+    "sentence_b": "The man is inside.",
+    "true_label": "Consistent",
+    "predicted_label": "Consistent",
+    "confidence": 0.9853,
+    "correct": true
+  },
+  {
+    "sentence_a": "A man reads the paper in a bar with green lighting.",
+    "sentence_b": "The man is reading the sportspage.",
+    "true_label": "Unrelated",
+    "predicted_label": "Unrelated",
+    "confidence": 0.9994,
+    "correct": true
+  },
+  {
+    "sentence_a": "A man reads the paper in a bar with green lighting.",
+    "sentence_b": "The man is climbing a mountain.",
+    "true_label": "Contradiction",
+    "predicted_label": "Contradiction",
+    "confidence": 0.9999,
+    "correct": true
+  },
+  {
+    "sentence_a": "Three firefighter come out of subway station.",
+    "sentence_b": "Three firefighters putting out a fire inside of a subway station.",
+    "true_label": "Unrelated",
+    "predicted_label": "Unrelated",
+    "confidence": 0.9781,
+    "correct": true
+  },
+  {
+    "sentence_a": "Three firefighter come out of subway station.",
+    "sentence_b": "Three firefighters coming up from a subway station.",
+    "true_label": "Consistent",
+    "predicted_label": "Consistent",
+    "confidence": 0.8566,
+    "correct": true
+  },
+  {
+    "sentence_a": "Three firefighter come out of subway station.",
+    "sentence_b": "Three firefighters playing cards inside a fire station.",
+    "true_label": "Contradiction",
+    "predicted_label": "Contradiction",
+    "confidence": 0.9997,
+    "correct": true
+  },
+  {
+    "sentence_a": "A person wearing a straw hat, standing outside working a steel apparatus with a pile of coconuts on the ground.",
+    "sentence_b": "A person is near a pile of coconuts.",
+    "true_label": "Consistent",
+    "predicted_label": "Consistent",
+    "confidence": 0.9956,
+    "correct": true
+  },
+  {
+    "sentence_a": "A person wearing a straw hat, standing outside working a steel apparatus with a pile of coconuts on the ground.",
+    "sentence_b": "A person is selling coconuts.",
+    "true_label": "Unrelated",
+    "predicted_label": "Unrelated",
+    "confidence": 0.9762,
+    "correct": true
+  },
+  {
+    "sentence_a": "A person wearing a straw hat, standing outside working a steel apparatus with a pile of coconuts on the ground.",
+    "sentence_b": "A person is burning a straw hat.",
+    "true_label": "Contradiction",
+    "predicted_label": "Contradiction",
+    "confidence": 0.9994,
+    "correct": true
+  },
+  {
+    "sentence_a": "Male in a blue jacket decides to lay in the grass.",
+    "sentence_b": "The guy in yellow is rolling on the grass",
+    "true_label": "Contradiction",
+    "predicted_label": "Contradiction",
+    "confidence": 0.9949,
+    "correct": true
+  },
+  {
+    "sentence_a": "Male in a blue jacket decides to lay in the grass.",
+    "sentence_b": "The guy wearing a blue jacket is laying on the green grass",
+    "true_label": "Consistent",
+    "predicted_label": "Unrelated",
+    "confidence": 0.9512,
+    "correct": false
+  },
+  {
+    "sentence_a": "Male in a blue jacket decides to lay in the grass.",
+    "sentence_b": "The guy wearing a blue jacket is laying on the green grass taking a nap.",
+    "true_label": "Unrelated",
+    "predicted_label": "Unrelated",
+    "confidence": 0.9937,
+    "correct": true
+  },
+  {
+    "sentence_a": "During calf roping a cowboy calls off his horse.",
+    "sentence_b": "A first time roper falls off his horse.",
+    "true_label": "Unrelated",
+    "predicted_label": "Unrelated",
+    "confidence": 0.999,
+    "correct": true
+  },
+  {
+    "sentence_a": "During calf roping a cowboy calls off his horse.",
+    "sentence_b": "A man ropes a calf successfully.",
+    "true_label": "Contradiction",
+    "predicted_label": "Unrelated",
+    "confidence": 0.8758,
+    "correct": false
+  },
+  {
+    "sentence_a": "A little boy in a gray and white striped sweater and tan pants is playing on a piece of playground equipment.",
+    "sentence_b": "A boy is on a playground.",
+    "true_label": "Consistent",
+    "predicted_label": "Consistent",
+    "confidence": 0.9826,
+    "correct": true
+  },
+  {
+    "sentence_a": "A little boy in a gray and white striped sweater and tan pants is playing on a piece of playground equipment.",
+    "sentence_b": "The boy is playing on the swings after school.",
+    "true_label": "Unrelated",
+    "predicted_label": "Unrelated",
+    "confidence": 0.9987,
+    "correct": true
+  },
+  {
+    "sentence_a": "A little boy in a gray and white striped sweater and tan pants is playing on a piece of playground equipment.",
+    "sentence_b": "The boy is sitting on the school bus on his way home.",
+    "true_label": "Contradiction",
+    "predicted_label": "Contradiction",
+    "confidence": 0.9999,
+    "correct": true
+  },
+  {
+    "sentence_a": "A woman wearing a ball cap squats down to touch the cracked earth.",
+    "sentence_b": "An archeologist wearing a hat squats to examine the site for a dig",
+    "true_label": "Unrelated",
+    "predicted_label": "Unrelated",
+    "confidence": 0.9987,
+    "correct": true
+  },
+  {
+    "sentence_a": "A woman wearing a ball cap squats down to touch the cracked earth.",
+    "sentence_b": "A squatting woman wearing a hat touching the ground.",
+    "true_label": "Consistent",
+    "predicted_label": "Consistent",
+    "confidence": 0.9804,
+    "correct": true
+  },
+  {
+    "sentence_a": "A woman wearing a ball cap squats down to touch the cracked earth.",
+    "sentence_b": "A woman wearing a sun bonnet planting a garden.",
+    "true_label": "Contradiction",
+    "predicted_label": "Contradiction",
+    "confidence": 0.9877,
+    "correct": true
+  },
+  {
+    "sentence_a": "Two children re laying on a rug with some wooden bricks laid out in a square between them.",
+    "sentence_b": "Two children are building a brick furnace.",
+    "true_label": "Unrelated",
+    "predicted_label": "Contradiction",
+    "confidence": 0.9807,
+    "correct": false
+  },
+  {
+    "sentence_a": "Two children re laying on a rug with some wooden bricks laid out in a square between them.",
+    "sentence_b": "Two children are playing catch at a park.",
+    "true_label": "Contradiction",
+    "predicted_label": "Contradiction",
+    "confidence": 0.9999,
+    "correct": true
+  },
+  {
+    "sentence_a": "Two children re laying on a rug with some wooden bricks laid out in a square between them.",
+    "sentence_b": "Two children are on a rug.",
+    "true_label": "Consistent",
+    "predicted_label": "Consistent",
+    "confidence": 0.9977,
+    "correct": true
+  },
+  {
+    "sentence_a": "A man standing in front of a building on the phone as two men to the side pain on the side.",
+    "sentence_b": "a guy near a building stands by two other men",
+    "true_label": "Consistent",
+    "predicted_label": "Consistent",
+    "confidence": 0.9898,
+    "correct": true
+  },
+  {
+    "sentence_a": "A man standing in front of a building on the phone as two men to the side pain on the side.",
+    "sentence_b": "two girls walk through a hall",
+    "true_label": "Contradiction",
+    "predicted_label": "Contradiction",
+    "confidence": 0.9999,
+    "correct": true
+  },
+  {
+    "sentence_a": "A man standing in front of a building on the phone as two men to the side pain on the side.",
+    "sentence_b": "a busy man stands with bodyguards",
+    "true_label": "Unrelated",
+    "predicted_label": "Unrelated",
+    "confidence": 0.9915,
+    "correct": true
+  },
+  {
+    "sentence_a": "The two young girls are dressed as fairies, and are playing in the leaves outdoors.",
+    "sentence_b": "Girls are playing outdoors.",
+    "true_label": "Consistent",
+    "predicted_label": "Consistent",
+    "confidence": 0.9902,
+    "correct": true
+  },
+  {
+    "sentence_a": "The two young girls are dressed as fairies, and are playing in the leaves outdoors.",
+    "sentence_b": "Two girls play dress up indoors.",
+    "true_label": "Contradiction",
+    "predicted_label": "Contradiction",
+    "confidence": 0.9984,
+    "correct": true
+  },
+  {
+    "sentence_a": "The two young girls are dressed as fairies, and are playing in the leaves outdoors.",
+    "sentence_b": "The two girls play in the Autumn.",
+    "true_label": "Unrelated",
+    "predicted_label": "Unrelated",
+    "confidence": 0.9922,
+    "correct": true
+  },
+  {
+    "sentence_a": "People jump over a mountain crevasse on a rope.",
+    "sentence_b": "Some people look visually afraid to jump.",
+    "true_label": "Unrelated",
+    "predicted_label": "Unrelated",
+    "confidence": 0.8603,
+    "correct": true
+  },
+  {
+    "sentence_a": "People jump over a mountain crevasse on a rope.",
+    "sentence_b": "People are jumping outside.",
+    "true_label": "Consistent",
+    "predicted_label": "Consistent",
+    "confidence": 0.9636,
+    "correct": true
+  },
+  {
+    "sentence_a": "People jump over a mountain crevasse on a rope.",
+    "sentence_b": "People slide over a mountain crevasse on a slide.",
+    "true_label": "Contradiction",
+    "predicted_label": "Contradiction",
+    "confidence": 0.9995,
+    "correct": true
+  },
+  {
+    "sentence_a": "A snowboarder on a wide plain of snow",
+    "sentence_b": "A snow field with a snowboarder on it",
+    "true_label": "Consistent",
+    "predicted_label": "Consistent",
+    "confidence": 0.9892,
+    "correct": true
+  },
+  {
+    "sentence_a": "A snowboarder on a wide plain of snow",
+    "sentence_b": "A snowboarder gliding over a field of snow",
+    "true_label": "Unrelated",
+    "predicted_label": "Consistent",
+    "confidence": 0.9351,
+    "correct": false
+  },
+  {
+    "sentence_a": "A snowboarder on a wide plain of snow",
+    "sentence_b": "A snowmobile in a blizzard",
+    "true_label": "Unrelated",
+    "predicted_label": "Contradiction",
+    "confidence": 0.9994,
+    "correct": false
+  },
+  {
+    "sentence_a": "An older women tending to a garden.",
+    "sentence_b": "The lady is cooking dinner",
+    "true_label": "Contradiction",
+    "predicted_label": "Contradiction",
+    "confidence": 0.9996,
+    "correct": true
+  },
+  {
+    "sentence_a": "An older women tending to a garden.",
+    "sentence_b": "The lady is weeding her garden",
+    "true_label": "Unrelated",
+    "predicted_label": "Unrelated",
+    "confidence": 0.9458,
+    "correct": true
+  },
+  {
+    "sentence_a": "An older women tending to a garden.",
+    "sentence_b": "The lady has a garden",
+    "true_label": "Consistent",
+    "predicted_label": "Consistent",
+    "confidence": 0.9263,
+    "correct": true
+  },
+  {
+    "sentence_a": "A man in a black shirt overlooking bike maintenance.",
+    "sentence_b": "A man destroys a bike.",
+    "true_label": "Contradiction",
+    "predicted_label": "Contradiction",
+    "confidence": 0.9988,
+    "correct": true
+  },
+  {
+    "sentence_a": "A man in a black shirt overlooking bike maintenance.",
+    "sentence_b": "A man watches bike repairs.",
+    "true_label": "Consistent",
+    "predicted_label": "Consistent",
+    "confidence": 0.9968,
+    "correct": true
+  },
+  {
+    "sentence_a": "A man in a black shirt overlooking bike maintenance.",
+    "sentence_b": "A man learns bike maintenance.",
+    "true_label": "Unrelated",
+    "predicted_label": "Unrelated",
+    "confidence": 0.5396,
+    "correct": true
+  },
+  {
+    "sentence_a": "A man in a black shirt is looking at a bike in a workshop.",
+    "sentence_b": "A man is wearing a red shirt",
+    "true_label": "Contradiction",
+    "predicted_label": "Contradiction",
+    "confidence": 0.9994,
+    "correct": true
+  },
+  {
+    "sentence_a": "A man in a black shirt is looking at a bike in a workshop.",
+    "sentence_b": "A man is in a black shirt",
+    "true_label": "Consistent",
+    "predicted_label": "Consistent",
+    "confidence": 0.9695,
+    "correct": true
+  },
+  {
+    "sentence_a": "A man in a black shirt is looking at a bike in a workshop.",
+    "sentence_b": "A man is deciding which bike to buy",
+    "true_label": "Unrelated",
+    "predicted_label": "Unrelated",
+    "confidence": 0.9879,
+    "correct": true
+  },
+  {
+    "sentence_a": "A man looking over a bicycle's rear wheel in the maintenance garage with various tools visible in the background.",
+    "sentence_b": "A person is in a garage.",
+    "true_label": "Consistent",
+    "predicted_label": "Consistent",
+    "confidence": 0.9893,
+    "correct": true
+  },
+  {
+    "sentence_a": "A man looking over a bicycle's rear wheel in the maintenance garage with various tools visible in the background.",
+    "sentence_b": "A man repairs bicycles.",
+    "true_label": "Consistent",
+    "predicted_label": "Consistent",
+    "confidence": 0.9558,
+    "correct": true
+  },
+  {
+    "sentence_a": "A man looking over a bicycle's rear wheel in the maintenance garage with various tools visible in the background.",
+    "sentence_b": "A man waits outside a garage.",
+    "true_label": "Contradiction",
+    "predicted_label": "Contradiction",
+    "confidence": 0.9913,
+    "correct": true
+  },
+  {
+    "sentence_a": "Three people sit on a bench at a station, the man looks oddly at the two women, the redheaded women looks up and forward in an awkward position, and the yellow blond girl twiddles with her hair.",
+    "sentence_b": "Some people stand around.",
+    "true_label": "Contradiction",
+    "predicted_label": "Contradiction",
+    "confidence": 0.9985,
+    "correct": true
+  },
+  {
+    "sentence_a": "Three people sit on a bench at a station, the man looks oddly at the two women, the redheaded women looks up and forward in an awkward position, and the yellow blond girl twiddles with her hair.",
+    "sentence_b": "People run together.",
+    "true_label": "Contradiction",
+    "predicted_label": "Contradiction",
+    "confidence": 0.9998,
+    "correct": true
+  },
+  {
+    "sentence_a": "Three people sit on a bench at a station, the man looks oddly at the two women, the redheaded women looks up and forward in an awkward position, and the yellow blond girl twiddles with her hair.",
+    "sentence_b": "People wait at a station.",
+    "true_label": "Consistent",
+    "predicted_label": "Consistent",
+    "confidence": 0.9818,
+    "correct": true
+  },
+  {
+    "sentence_a": "A child wearing a red top is standing behind a blond headed child sitting in a wheelbarrow.",
+    "sentence_b": "A child wearing a red top is standing behind a blond headed child",
+    "true_label": "Consistent",
+    "predicted_label": "Consistent",
+    "confidence": 0.9322,
+    "correct": true
+  },
+  {
+    "sentence_a": "A child wearing a red top is standing behind a blond headed child sitting in a wheelbarrow.",
+    "sentence_b": "A child wearing a red top is standing on top of a blond headed child",
+    "true_label": "Contradiction",
+    "predicted_label": "Contradiction",
+    "confidence": 0.9972,
+    "correct": true
+  },
+  {
+    "sentence_a": "A child wearing a red top is standing behind a blond headed child sitting in a wheelbarrow.",
+    "sentence_b": "A child wearing a red top is standing behind a pretty blond headed child",
+    "true_label": "Unrelated",
+    "predicted_label": "Unrelated",
+    "confidence": 0.9981,
+    "correct": true
+  },
+  {
+    "sentence_a": "A person dressed in a dress with flowers and a stuffed bee attached to it, is pushing a baby stroller down the street.",
+    "sentence_b": "A lady sitting on a bench in the park.",
+    "true_label": "Contradiction",
+    "predicted_label": "Contradiction",
+    "confidence": 0.9998,
+    "correct": true
+  },
+  {
+    "sentence_a": "A person dressed in a dress with flowers and a stuffed bee attached to it, is pushing a baby stroller down the street.",
+    "sentence_b": "An old lady pushing a stroller down a busy street.",
+    "true_label": "Unrelated",
+    "predicted_label": "Unrelated",
+    "confidence": 0.9936,
+    "correct": true
+  },
+  {
+    "sentence_a": "A person dressed in a dress with flowers and a stuffed bee attached to it, is pushing a baby stroller down the street.",
+    "sentence_b": "A person outside pushing a stroller.",
+    "true_label": "Consistent",
+    "predicted_label": "Consistent",
+    "confidence": 0.9917,
+    "correct": true
+  },
+  {
+    "sentence_a": "A dog jumping for a Frisbee in the snow.",
+    "sentence_b": "A pet is enjoying a game of fetch with his owner.",
+    "true_label": "Unrelated",
+    "predicted_label": "Unrelated",
+    "confidence": 0.9977,
+    "correct": true
+  },
+  {
+    "sentence_a": "A dog jumping for a Frisbee in the snow.",
+    "sentence_b": "A cat washes his face and whiskers with his front paw.",
+    "true_label": "Contradiction",
+    "predicted_label": "Contradiction",
+    "confidence": 1.0,
+    "correct": true
+  },
+  {
+    "sentence_a": "A dog jumping for a Frisbee in the snow.",
+    "sentence_b": "An animal is outside in the cold weather, playing with a plastic toy.",
+    "true_label": "Consistent",
+    "predicted_label": "Consistent",
+    "confidence": 0.9812,
+    "correct": true
+  },
+  {
+    "sentence_a": "People are conversing at a dining table under a canopy.",
+    "sentence_b": "People at a party are seated for dinner on the lawn.",
+    "true_label": "Unrelated",
+    "predicted_label": "Unrelated",
+    "confidence": 0.969,
+    "correct": true
+  },
+  {
+    "sentence_a": "People are conversing at a dining table under a canopy.",
+    "sentence_b": "People are talking underneath a covering.",
+    "true_label": "Consistent",
+    "predicted_label": "Consistent",
+    "confidence": 0.9956,
+    "correct": true
+  },
+  {
+    "sentence_a": "People are conversing at a dining table under a canopy.",
+    "sentence_b": "People are screaming at a boxing match.",
+    "true_label": "Contradiction",
+    "predicted_label": "Contradiction",
+    "confidence": 1.0,
+    "correct": true
+  },
+  {
+    "sentence_a": "A girl playing a violin along with a group of people",
+    "sentence_b": "A girl is washing a load of laundry.",
+    "true_label": "Contradiction",
+    "predicted_label": "Contradiction",
+    "confidence": 0.9999,
+    "correct": true
+  },
+  {
+    "sentence_a": "A girl playing a violin along with a group of people",
+    "sentence_b": "A girl is playing an instrument.",
+    "true_label": "Consistent",
+    "predicted_label": "Consistent",
+    "confidence": 0.9907,
+    "correct": true
+  },
+  {
+    "sentence_a": "A girl playing a violin along with a group of people",
+    "sentence_b": "A group of people are playing in a symphony.",
+    "true_label": "Unrelated",
+    "predicted_label": "Unrelated",
+    "confidence": 0.9924,
+    "correct": true
+  },
+  {
+    "sentence_a": "A woman within an orchestra is playing a violin.",
+    "sentence_b": "A woman is playing a concert.",
+    "true_label": "Unrelated",
+    "predicted_label": "Unrelated",
+    "confidence": 0.9219,
+    "correct": true
+  },
+  {
+    "sentence_a": "A woman within an orchestra is playing a violin.",
+    "sentence_b": "A woman is playing the violin.",
+    "true_label": "Consistent",
+    "predicted_label": "Consistent",
+    "confidence": 0.9878,
+    "correct": true
+  }
+]
