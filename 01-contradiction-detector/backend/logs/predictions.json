@@ -1,0 +1,194 @@
+[
+  {
+    "timestamp": "2026-08-15T17:27:36.428013",
+    "sentence_a": "The server is running.",
+    "sentence_b": "The server is offline.",
+    "label": "Contradiction",
+    "confidence": 0.9995,
+    "nltk_analysis": {
+      "cleaned_a": "server running",
+      "cleaned_b": "server offline",
+      "token_overlap": 0.5,
+      "common_tokens": [
+        "server"
+      ],
+      "antonyms_found": [],
+      "wordnet_similarity": 0.5278
+    }
+  },
+  {
+    "timestamp": "2026-08-15T18:41:00.827509",
+    "sentence_a": "The server is running.\n",
+    "sentence_b": "The server is offline.",
+    "label": "Contradiction",
+    "confidence": 0.9996,
+    "nltk_analysis": {
+      "cleaned_a": "server running",
+      "cleaned_b": "server offline",
+      "token_overlap": 0.5,
+      "common_tokens": [
+        "server"
+      ],
+      "antonyms_found": [],
+      "wordnet_similarity": 0.5278
+    }
+  },
+  {
+    "timestamp": "2026-08-15T18:42:21.839784",
+    "sentence_a": "A man is eating pizza.\n",
+    "sentence_b": "A man is having food.",
+    "label": "Consistent",
+    "confidence": 0.9961,
+    "nltk_analysis": {
+      "cleaned_a": "man eating pizza",
+      "cleaned_b": "man food",
+      "token_overlap": 0.3333,
+      "common_tokens": [
+        "man"
+      ],
+      "antonyms_found": [],
+      "wordnet_similarity": 0.2795
+    }
+  },
+  {
+    "timestamp": "2026-08-15T18:43:19.172882",
+    "sentence_a": "The cat is sleeping on the couch.\n",
+    "sentence_b": "The stock market crashed today.",
+    "label": "Contradiction",
+    "confidence": 0.9988,
+    "nltk_analysis": {
+      "cleaned_a": "cat sleeping couch",
+      "cleaned_b": "stock market crashed today",
+      "token_overlap": 0.0,
+      "common_tokens": [],
+      "antonyms_found": [],
+      "wordnet_similarity": 0.0694
+    }
+  },
+  {
+    "timestamp": "2026-08-15T18:50:46.326827",
+    "sentence_a": "The dog is playing in the garden.\n",
+    "sentence_b": "She completed her mathematics homework.",
+    "label": "Contradiction",
+    "confidence": 0.9997,
+    "nltk_analysis": {
+      "cleaned_a": "dog playing garden",
+      "cleaned_b": "completed mathematics homework",
+      "token_overlap": 0.0,
+      "common_tokens": [],
+      "antonyms_found": [],
+      "wordnet_similarity": 0.0737
+    }
+  },
+  {
+    "timestamp": "2026-08-15T18:51:31.851045",
+    "sentence_a": "It is raining heavily outside.",
+    "sentence_b": "He scored a century in cricket.",
+    "label": "Unrelated",
+    "confidence": 0.7397,
+    "nltk_analysis": {
+      "cleaned_a": "raining heavily outside",
+      "cleaned_b": "scored century cricket",
+      "token_overlap": 0.0,
+      "common_tokens": [],
+      "antonyms_found": [],
+      "wordnet_similarity": 0.1226
+    }
+  },
+  {
+    "timestamp": "2026-08-15T18:52:36.961959",
+    "sentence_a": "A man is eating pizza.",
+    "sentence_b": "A man is having food.",
+    "label": "Consistent",
+    "confidence": 0.9961,
+    "nltk_analysis": {
+      "cleaned_a": "man eating pizza",
+      "cleaned_b": "man food",
+      "token_overlap": 0.3333,
+      "common_tokens": [
+        "man"
+      ],
+      "antonyms_found": [],
+      "wordnet_similarity": 0.2795
+    }
+  },
+  {
+    "timestamp": "2026-08-15T19:17:05.201024",
+    "sentence_a": "The dog is playing in the garden.",
+    "sentence_b": "She completed her mathematics homework.",
+    "label": "Contradiction",
+    "confidence": 0.9997,
+    "nltk_analysis": {
+      "cleaned_a": "dog playing garden",
+      "cleaned_b": "completed mathematics homework",
+      "token_overlap": 0.0,
+      "common_tokens": [],
+      "antonyms_found": [],
+      "wordnet_similarity": 0.0737
+    }
+  },
+  {
+    "timestamp": "2026-08-15T19:32:02.442218",
+    "sentence_a": "The dog is playing in the garden.",
+    "sentence_b": "She completed her mathematics homework.",
+    "label": "Unrelated",
+    "confidence": 0.9997,
+    "nltk_analysis": {
+      "cleaned_a": "dog playing garden",
+      "cleaned_b": "completed mathematics homework",
+      "token_overlap": 0.0,
+      "common_tokens": [],
+      "antonyms_found": [],
+      "wordnet_similarity": 0.0737
+    }
+  },
+  {
+    "timestamp": "2026-08-15T19:33:31.782044",
+    "sentence_a": "The server is running.",
+    "sentence_b": "The server is offline.",
+    "label": "Contradiction",
+    "confidence": 0.9996,
+    "nltk_analysis": {
+      "cleaned_a": "server running",
+      "cleaned_b": "server offline",
+      "token_overlap": 0.5,
+      "common_tokens": [
+        "server"
+      ],
+      "antonyms_found": [],
+      "wordnet_similarity": 0.5278
+    }
+  },
+  {
+    "timestamp": "2026-08-15T19:36:40.949810",
+    "sentence_a": "A man is eating pizza.",
+    "sentence_b": "A man is having food.",
+    "label": "Consistent",
+    "confidence": 0.9961,
+    "nltk_analysis": {
+      "cleaned_a": "man eating pizza",
+      "cleaned_b": "man food",
+      "token_overlap": 0.3333,
+      "common_tokens": [
+        "man"
+      ],
+      "antonyms_found": [],
+      "wordnet_similarity": 0.2795
+    }
+  },
+  {
+    "timestamp": "2026-08-15T19:37:13.663979",
+    "sentence_a": "The cat is sleeping on the couch.",
+    "sentence_b": "The stock market crashed today.",
+    "label": "Unrelated",
+    "confidence": 0.9988,
+    "nltk_analysis": {
+      "cleaned_a": "cat sleeping couch",
+      "cleaned_b": "stock market crashed today",
+      "token_overlap": 0.0,
+      "common_tokens": [],
+      "antonyms_found": [],
+      "wordnet_similarity": 0.0694
+    }
+  }
+]

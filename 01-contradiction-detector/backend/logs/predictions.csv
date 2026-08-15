@@ -1,0 +1,17 @@
+timestamp,sentence_a,sentence_b,label,confidence,token_overlap,antonyms_found,wordnet_similarity
+2026-08-15T17:27:36.428013,The server is running.,The server is offline.,Contradiction,0.9995,0.5,,0.5278
+2026-08-15T18:41:00.827509,"The server is running.
+",The server is offline.,Contradiction,0.9996,0.5,,0.5278
+2026-08-15T18:42:21.839784,"A man is eating pizza.
+",A man is having food.,Consistent,0.9961,0.3333,,0.2795
+2026-08-15T18:43:19.172882,"The cat is sleeping on the couch.
+",The stock market crashed today.,Contradiction,0.9988,0.0,,0.0694
+2026-08-15T18:50:46.326827,"The dog is playing in the garden.
+",She completed her mathematics homework.,Contradiction,0.9997,0.0,,0.0737
+2026-08-15T18:51:31.851045,It is raining heavily outside.,He scored a century in cricket.,Unrelated,0.7397,0.0,,0.1226
+2026-08-15T18:52:36.961959,A man is eating pizza.,A man is having food.,Consistent,0.9961,0.3333,,0.2795
+2026-08-15T19:17:05.201024,The dog is playing in the garden.,She completed her mathematics homework.,Contradiction,0.9997,0.0,,0.0737
+2026-08-15T19:32:02.442218,The dog is playing in the garden.,She completed her mathematics homework.,Unrelated,0.9997,0.0,,0.0737
+2026-08-15T19:33:31.782044,The server is running.,The server is offline.,Contradiction,0.9996,0.5,,0.5278
+2026-08-15T19:36:40.949810,A man is eating pizza.,A man is having food.,Consistent,0.9961,0.3333,,0.2795
+2026-08-15T19:37:13.663979,The cat is sleeping on the couch.,The stock market crashed today.,Unrelated,0.9988,0.0,,0.0694

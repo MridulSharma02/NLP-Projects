@@ -1,3 +1,8 @@
 node_modules/
 .env
 worldbot/js/config.js
+
+venv/
+__pycache__/
+logs/
+*.pyc
