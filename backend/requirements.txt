@@ -5,3 +5,4 @@ nltk
 pydantic
 datasets
 scikit-learn
+gradio

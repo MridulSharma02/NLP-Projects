@@ -190,5 +190,157 @@
       "antonyms_found": [],
       "wordnet_similarity": 0.0694
     }
+  },
+  {
+    "timestamp": "2026-08-18T11:54:19.859220",
+    "sentence_a": "The server is running",
+    "sentence_b": "The server is offline",
+    "label": "Contradiction",
+    "confidence": 0.9996,
+    "nltk_analysis": {
+      "cleaned_a": "server running",
+      "cleaned_b": "server offline",
+      "token_overlap": 0.5,
+      "common_tokens": [
+        "server"
+      ],
+      "antonyms_found": [],
+      "wordnet_similarity": 0.5278
+    }
+  },
+  {
+    "timestamp": "2026-08-18T11:57:13.186911",
+    "sentence_a": "i am playing game on the playstation but gta 6 is not working in ps5",
+    "sentence_b": "basically i have rtx 5090 on pc",
+    "label": "Unrelated",
+    "confidence": 0.742,
+    "nltk_analysis": {
+      "cleaned_a": "playing game playstation gta working",
+      "cleaned_b": "basically rtx pc",
+      "token_overlap": 0.0,
+      "common_tokens": [],
+      "antonyms_found": [],
+      "wordnet_similarity": 0.0861
+    }
+  },
+  {
+    "timestamp": "2026-08-18T11:57:46.216791",
+    "sentence_a": "i am playing game on the playstation but gta 6 is not working in ps5",
+    "sentence_b": "basically i have rtx 5090 on pc also i have ps5",
+    "label": "Unrelated",
+    "confidence": 0.9493,
+    "nltk_analysis": {
+      "cleaned_a": "playing game playstation gta working",
+      "cleaned_b": "basically rtx pc also",
+      "token_overlap": 0.0,
+      "common_tokens": [],
+      "antonyms_found": [],
+      "wordnet_similarity": 0.0906
+    }
+  },
+  {
+    "timestamp": "2026-08-18T11:58:15.268729",
+    "sentence_a": "i am playing game on the playstation but gta 6 is not working in ps5",
+    "sentence_b": "basically i have rtx 5090 on pc also i have playstation",
+    "label": "Unrelated",
+    "confidence": 0.8485,
+    "nltk_analysis": {
+      "cleaned_a": "playing game playstation gta working",
+      "cleaned_b": "basically rtx pc also playstation",
+      "token_overlap": 0.2,
+      "common_tokens": [
+        "playstation"
+      ],
+      "antonyms_found": [],
+      "wordnet_similarity": 0.0906
+    }
+  },
+  {
+    "timestamp": "2026-08-18T11:58:57.199941",
+    "sentence_a": "i am playing game on the playstation but gta 6 is not working in ps5",
+    "sentence_b": "basically i am playing on  playstation",
+    "label": "Consistent",
+    "confidence": 0.9894,
+    "nltk_analysis": {
+      "cleaned_a": "playing game playstation gta working",
+      "cleaned_b": "basically playing playstation",
+      "token_overlap": 0.4,
+      "common_tokens": [
+        "playing",
+        "playstation"
+      ],
+      "antonyms_found": [],
+      "wordnet_similarity": 0.2448
+    }
+  },
+  {
+    "timestamp": "2026-08-18T11:59:21.518635",
+    "sentence_a": "i am playing game on the playstation but gta 6 is not working in ps5",
+    "sentence_b": "basically i am playing on  playstation but also i have pc",
+    "label": "Unrelated",
+    "confidence": 0.8911,
+    "nltk_analysis": {
+      "cleaned_a": "playing game playstation gta working",
+      "cleaned_b": "basically playing playstation also pc",
+      "token_overlap": 0.4,
+      "common_tokens": [
+        "playing",
+        "playstation"
+      ],
+      "antonyms_found": [],
+      "wordnet_similarity": 0.1655
+    }
+  },
+  {
+    "timestamp": "2026-08-18T12:04:50.699959",
+    "sentence_a": "I only play on PlayStation and do not own a PC",
+    "sentence_b": "I have a PC for gaming.",
+    "label": "Contradiction",
+    "confidence": 0.9977,
+    "nltk_analysis": {
+      "cleaned_a": "play playstation pc",
+      "cleaned_b": "pc gaming",
+      "token_overlap": 0.3333,
+      "common_tokens": [
+        "pc"
+      ],
+      "antonyms_found": [],
+      "wordnet_similarity": 0.2994
+    }
+  },
+  {
+    "timestamp": "2026-08-18T12:09:13.095170",
+    "sentence_a": "Although the project faced challenges, it was ultimately completed successfully.",
+    "sentence_b": "The project was abandoned due to insurmountable difficulties.",
+    "label": "Contradiction",
+    "confidence": 0.9996,
+    "nltk_analysis": {
+      "cleaned_a": "although project faced challenge ultimately completed successfully",
+      "cleaned_b": "project abandoned due insurmountable difficulty",
+      "token_overlap": 0.1429,
+      "common_tokens": [
+        "project"
+      ],
+      "antonyms_found": [],
+      "wordnet_similarity": 0.1556
+    }
+  },
+  {
+    "timestamp": "2026-08-18T12:12:22.889393",
+    "sentence_a": "Mera server chal raha hai.",
+    "sentence_b": "Server offline hai.",
+    "label": "Contradiction",
+    "confidence": 0.9727,
+    "nltk_analysis": {
+      "cleaned_a": "mera server chal raha hai",
+      "cleaned_b": "server offline hai",
+      "token_overlap": 0.4,
+      "common_tokens": [
+        "server",
+        "hai"
+      ],
+      "antonyms_found": [],
+      "wordnet_similarity": 1.0
+    }
   }
 ]
