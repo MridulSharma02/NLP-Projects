@@ -4,3 +4,4 @@ pydantic
 datasets
 scikit-learn
 requests
+huggingface_hub==0.23.4
