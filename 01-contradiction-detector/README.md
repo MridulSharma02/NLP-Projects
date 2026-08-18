@@ -3,7 +3,9 @@ title: Contradiction Detector
 emoji: 🔍
 colorFrom: blue
 colorTo: red
-sdk: docker
+sdk: gradio
+sdk_version: 4.44.0
+app_file: app_gradio.py
 pinned: false
 ---
 
