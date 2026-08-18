@@ -1,3 +1,12 @@
+---
+title: Contradiction Detector
+emoji: 🔍
+colorFrom: blue
+colorTo: red
+sdk: docker
+pinned: false
+---
+
 # 🔍 Contradiction Detector
 
 A Natural Language Processing system that determines whether two sentences are **Consistent**, **Contradictory**, or **Unrelated** — built with FastAPI, NLTK, and a pretrained NLI model.
