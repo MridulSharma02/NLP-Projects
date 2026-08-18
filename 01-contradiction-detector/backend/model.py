@@ -1,7 +1,9 @@
 from sentence_transformers import CrossEncoder
 from preprocessor import analyze
 
-model = CrossEncoder("cross-encoder/nli-deberta-v3-small")
+import os
+model_path = "fine-tuned-model" if os.path.exists("fine-tuned-model") else "cross-encoder/nli-deberta-v3-small"
+model = CrossEncoder(model_path)
 
 LABELS = {0: "Contradiction", 1: "Entailment", 2: "Neutral"}
 LABEL_MAP = {"Contradiction": "Contradiction", "Entailment": "Consistent", "Neutral": "Unrelated"}

@@ -62,6 +62,32 @@ This uses NLTK analysis as a correction layer on top of the model.
 
 ---
 
+---
+
+## 🎓 Model Training
+
+The base `cross-encoder/nli-deberta-v3-small` model was fine-tuned on 10,000 samples from the SNLI dataset to improve domain-specific performance.
+
+### Run Fine-tuning
+
+```bash
+cd backend
+.\venv\Scripts\activate
+python model_training.py
+```
+
+This will:
+- Load 10,000 SNLI training samples
+- Fine-tune the model for 1 epoch
+- Evaluate on 100 test samples before and after
+- Save trained weights to `fine-tuned-model/`
+
+The API automatically loads the fine-tuned model if available.
+
+---
+
+---
+
 ## 📊 Model Performance
 
 Evaluated on **100 samples** from the SNLI test set:
