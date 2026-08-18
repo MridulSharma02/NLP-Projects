@@ -1,0 +1,11 @@
+fastapi
+uvicorn
+sentence-transformers
+nltk
+pydantic
+datasets
+scikit-learn
+gradio==3.50.2
+huggingface_hub==0.19.4
+streamlit
+requests
