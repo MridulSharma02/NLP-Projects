@@ -4,4 +4,3 @@ pydantic
 datasets
 scikit-learn
 requests
-gradio==4.44.0
