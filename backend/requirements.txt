@@ -6,3 +6,5 @@ pydantic
 datasets
 scikit-learn
 gradio
+streamlit
+requests
