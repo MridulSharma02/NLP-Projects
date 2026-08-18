@@ -36,3 +36,5 @@ demo = gr.Interface(
     description="Determine if two sentences are Consistent, Contradictory, or Unrelated"
 )
 
+if __name__ == "__main__":
+    demo.launch()
