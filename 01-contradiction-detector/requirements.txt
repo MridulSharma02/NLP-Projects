@@ -1,3 +1,7 @@
+spaces
+starlette==0.37.2
+fastapi==0.111.0
+gradio==4.44.1
 sentence-transformers
 nltk
 pydantic

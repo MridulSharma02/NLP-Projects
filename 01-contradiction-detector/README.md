@@ -11,7 +11,7 @@ pinned: false
 
 # 🔍 Contradiction Detector
 
-A Natural Language Processing system that determines whether two sentences are **Consistent**, **Contradictory**, or **Unrelated** — built with FastAPI, NLTK, and a pretrained NLI model.
+A Natural Language Processing system that determines whether two sentences are **Consistent**, **Contradictory**, or **Unrelated** — built with Gradio, NLTK, and a pretrained NLI CrossEncoder model, deployed on HuggingFace Spaces with ZeroGPU.
 
 ---
 
@@ -21,9 +21,9 @@ Given two sentences A and B, classify their relationship:
 
 | Label | Meaning | Example |
 |---|---|---|
-| 🔴 Contradiction | Sentences conflict | "The server is running." vs "The server is offline." |
-| 🟢 Consistent | Sentences agree | "A man is eating pizza." vs "A man is having food." |
-| 🟡 Unrelated | Sentences share no connection | "The cat is sleeping." vs "Stock market crashed." |
+| ❌ Contradiction | Sentences conflict | "The server is running." vs "The server is offline." |
+| ✅ Consistent | Sentences agree | "A man is eating pizza." vs "A man is having food." |
+| ↔️ Unrelated | Sentences share no connection | "The cat is sleeping." vs "Stock market crashed." |
 
 ---
 
@@ -32,16 +32,16 @@ Given two sentences A and B, classify their relationship:
 ```
 contradiction-detector/
 ├── backend/
-│   ├── main.py            # FastAPI app and route definitions
-│   ├── model.py           # Pretrained NLI model + prediction logic
+│   ├── app_gradio.py      # Gradio UI — main entry point for HF Space
+│   ├── model.py           # Two-stage NLI prediction pipeline
 │   ├── preprocessor.py    # NLTK preprocessing pipeline
 │   ├── schemas.py         # Pydantic request/response models
 │   ├── logger.py          # Prediction logging to JSON and CSV
-│   ├── evaluator.py       # SNLI dataset evaluation script
-│   └── requirements.txt
-│
-└── frontend/
-    └── app.py             # Streamlit UI
+│   └── evaluator.py       # SNLI dataset evaluation script
+├── frontend/
+│   └── app.py             # Local Streamlit UI (development only)
+├── README.md
+└── requirements.txt
 ```
 
 ---
@@ -61,41 +61,22 @@ After preprocessing, three linguistic features are computed:
 - **Antonym Detection** — checks if any word in A is an antonym of any word in B using WordNet
 - **WordNet Similarity** — semantic similarity score using `path_similarity`
 
-### 3. Pretrained NLI Model
-The cleaned sentences are passed to `cross-encoder/nli-deberta-v3-small` — a pretrained Natural Language Inference model from HuggingFace that classifies the pair as Contradiction / Entailment / Neutral.
+### 3. Two-Stage Classification Pipeline
 
-### 4. NLTK Override Layer
-To handle edge cases where the model mislabels completely unrelated sentences as Contradiction, an override rule is applied:
+#### Stage 1: Semantic Disconnection Check (NLTK)
+Before passing to the model, a lightweight NLTK-based filter checks if the sentences are semantically disconnected:
 
-> If model predicts **Contradiction** AND token overlap is **0.0** AND WordNet similarity is **below 0.15** → override to **Unrelated**
+> If **token overlap == 0.0** AND **WordNet similarity < 0.12** → classify as **Unrelated** immediately
 
-This uses NLTK analysis as a correction layer on top of the model.
+This catches obviously unrelated sentence pairs efficiently without wasting model inference.
 
----
+#### Stage 2: CrossEncoder NLI Model
+If sentences pass Stage 1 (i.e. they share some semantic connection), they are passed to `cross-encoder/nli-MiniLM2-L6-H768` — a pretrained Natural Language Inference CrossEncoder from HuggingFace that classifies the pair as:
+- **Contradiction** (mapped to "Contradiction")
+- **Entailment** (mapped to "Consistent")
+- **Neutral** (mapped to "Unrelated")
 
----
-
-## 🎓 Model Training
-
-The base `cross-encoder/nli-deberta-v3-small` model was fine-tuned on 10,000 samples from the SNLI dataset to improve domain-specific performance.
-
-### Run Fine-tuning
-
-```bash
-cd backend
-.\venv\Scripts\activate
-python model_training.py
-```
-
-This will:
-- Load 10,000 SNLI training samples
-- Fine-tune the model for 1 epoch
-- Evaluate on 100 test samples before and after
-- Save trained weights to `fine-tuned-model/`
-
-The API automatically loads the fine-tuned model if available.
-
----
+This two-stage approach combines the efficiency of rule-based NLP with the accuracy of deep learning.
 
 ---
 
@@ -112,13 +93,13 @@ Evaluated on **100 samples** from the SNLI test set:
 
 ---
 
-## 🚀 Setup & Run
+## 🚀 Local Setup & Run
 
 ### Prerequisites
 - Python 3.11+
 - VS Code or any terminal
 
-### Backend
+### Backend (FastAPI)
 
 ```bash
 cd backend
@@ -132,10 +113,9 @@ uvicorn main:app --reload
 API runs at: `http://localhost:8000`  
 Interactive docs at: `http://localhost:8000/docs`
 
-### Frontend
+### Frontend (Streamlit — local only)
 
 ```bash
-# Open a new terminal, keep backend running
 cd backend
 .\venv\Scripts\activate
 streamlit run ../frontend/app.py
@@ -143,9 +123,36 @@ streamlit run ../frontend/app.py
 
 UI opens at: `http://localhost:8501`
 
+### Gradio (HuggingFace Space)
+
+```bash
+cd backend
+.\venv\Scripts\activate
+python app_gradio.py
+```
+
 ---
 
-## 🔌 API Endpoints
+## 🌐 Deployment
+
+This app is deployed on **HuggingFace Spaces** using **ZeroGPU** (free tier).
+
+- **Live App:** [MridulSharma02/contradiction-detector](https://huggingface.co/spaces/MridulSharma02/contradiction-detector)
+- **SDK:** Gradio 4.44.1
+- **Hardware:** ZeroGPU (Nvidia RTX Pro 6000 Blackwell, dynamic allocation)
+
+### Deployment Stack
+| Component | Detail |
+|---|---|
+| Platform | HuggingFace Spaces |
+| SDK | Gradio 4.44.1 |
+| GPU | ZeroGPU (free, dynamic) |
+| Decorator | `@spaces.GPU` on inference function |
+| Web Server | Uvicorn + Starlette (via Gradio) |
+
+---
+
+## 🔌 API Endpoints (Local FastAPI)
 
 | Method | Endpoint | Description |
 |---|---|---|
@@ -208,12 +215,20 @@ Downloads 100 samples from SNLI test set, runs predictions, and prints classific
 
 | Component | Technology |
 |---|---|
-| Backend Framework | FastAPI |
-| NLP Preprocessing | NLTK (tokenization, lemmatization, WordNet) |
-| NLI Model | `cross-encoder/nli-deberta-v3-small` |
+| Gradio UI | Gradio 4.44.1 |
+| Backend Framework | FastAPI + Uvicorn |
+| NLP Preprocessing | NLTK (tokenization, stopwords, lemmatization, WordNet) |
+| Feature Extraction | Token overlap, antonym detection, WordNet path similarity |
+| NLI Model | `cross-encoder/nli-MiniLM2-L6-H768` (HuggingFace) |
+| Model Framework | sentence-transformers (CrossEncoder) |
+| Two-Stage Pipeline | NLTK semantic filter → CrossEncoder inference |
 | Dataset | SNLI (Stanford Natural Language Inference) |
-| Frontend | Streamlit |
+| Local Frontend | Streamlit |
+| Deployment | HuggingFace Spaces + ZeroGPU |
+| GPU Decorator | `spaces` library (`@spaces.GPU`) |
+| Dependency Pinning | starlette==0.37.2, fastapi==0.111.0 |
 | Logging | JSON + CSV |
+| Data Validation | Pydantic |
 
 ---
 
