@@ -1,0 +1,27 @@
+
+==================================================
+   HUMAN vs AI CORPUS ANALYSIS REPORT
+==================================================
+
+DATASET SUMMARY
+---------------
+Total turns        : 3996
+Human turns        : 2000
+AI turns           : 1996
+
+WORD COUNT
+----------
+Human avg          : 10.45
+AI avg             : 47.47
+
+SENTENCE COUNT
+--------------
+Human avg          : 1.01
+AI avg             : 2.97
+
+AVG WORD LENGTH
+---------------
+Human avg          : 4.55
+AI avg             : 4.35
+
+==================================================

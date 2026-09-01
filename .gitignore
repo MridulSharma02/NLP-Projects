@@ -6,3 +6,7 @@ venv/
 __pycache__/
 logs/
 *.pyc
+
+desktop.ini
+02-HumanAI-Corpus/corpus_raw.csv
+02-HumanAI-Corpus/corpus_annotated.csv
