@@ -1,0 +1,26 @@
+tweet_text,class_label,source,split
+"Massive earthquake hit Kathmandu, buildings collapsed near Durbar Square, need rescue teams immediately!",requests_or_urgent_needs,manual,manual
+SOS! Trapped under rubble at MG Road Bangalore after earthquake. Send help now!,requests_or_urgent_needs,manual,manual
+Flood water rising rapidly in Dharavi Mumbai. Families stranded on rooftops. Need boats!,requests_or_urgent_needs,manual,manual
+Highway 44 completely submerged near Nagpur. Vehicles stranded. Emergency services needed.,infrastructure_and_utility_damage,manual,manual
+Please send relief to Patna district. Entire village underwater. No food or medicine.,requests_or_urgent_needs,manual,manual
+Forest fire spreading toward residential area in Shimla Hills. Evacuate sector 4 now!,caution_and_advice,manual,manual
+Cyclone Amphan hitting West Bengal coast. People in South 24 Parganas must evacuate now.,caution_and_advice,manual,manual
+Tsunami warning issued for Tamil Nadu coast. Evacuate Chennai Marina beach area immediately!,caution_and_advice,manual,manual
+Mass casualty at Rajiv Chowk metro Delhi. Need doctors and ambulances at platform 3.,requests_or_urgent_needs,manual,manual
+Bridge collapsed on Godavari river near Rajahmundry. Many vehicles fell. SOS!,infrastructure_and_utility_damage,manual,manual
+Landslide blocked Manali-Leh highway. 3 buses stuck with passengers. Need helicopters.,requests_or_urgent_needs,manual,manual
+pls help flod in our area nd no1 is cmng 2 help us we r stuck,requests_or_urgent_needs,manual,manual
+URGENT SOS earthquake destroyed our house family trapped send help asap location: sector 7 rohini,requests_or_urgent_needs,manual,manual
+helppp!! fire in bilding near mg road cant get out smoke evrywr call 100,requests_or_urgent_needs,manual,manual
+Gas pipeline explosion near Vijayawada. People in 2km radius please evacuate.,caution_and_advice,manual,manual
+Train derailed near Balasore Odisha. Multiple coaches off track. Emergency medical help needed now.,injured_or_dead_people,manual,manual
+Mine collapse in Dhanbad Jharkhand. 15 workers trapped 200 feet underground. NDRF needed.,requests_or_urgent_needs,manual,manual
+Chemical leak at Bhopal industrial zone. Workers unconscious. Send hazmat and medical teams.,requests_or_urgent_needs,manual,manual
+District Collector Raigad announces mandatory evacuation of all coastal villages within 5km of shoreline.,displaced_people_and_evacuations,manual,manual
+NDRF teams deployed to flood-affected areas of Sangli district. Relief operations underway.,rescue_volunteering_or_donation_effort,manual,manual
+IMD issues red alert for heavy rainfall in Himachal Pradesh. Landslide risk high near Kullu.,caution_and_advice,manual,manual
+State government opens 150 relief camps across 12 flood-affected districts in Assam.,displaced_people_and_evacuations,manual,manual
+Rescue operation continues at Chamoli disaster site. 30 workers still missing underground.,missing_or_found_people,manual,manual
+Drought conditions critical in Marathwada. Villages have no water for 3 weeks. Need tankers.,requests_or_urgent_needs,manual,manual
+Building fire at Karol Bagh Delhi. People trapped on upper floors. Fire brigade not reachable.,requests_or_urgent_needs,manual,manual

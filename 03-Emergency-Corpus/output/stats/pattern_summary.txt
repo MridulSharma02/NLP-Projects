@@ -1,0 +1,18 @@
+SYNTACTIC PATTERN DETECTION SUMMARY
+========================================
+Total messages analyzed: 2000
+With location pattern: 998 (49.9%)
+With action pattern: 670 (33.5%)
+
+Location pattern breakdown:
+  PREP+PROPN: 938
+  LOC_NOUN: 155
+  PROPN+LOC_NOUN: 120
+
+Action pattern breakdown:
+  ACTION_VERB: 501
+  URGENCY_ADVERB: 117
+  DISTRESS_SIGNAL: 67
+  VICTIM_STATE: 61
+  PLEA_PATTERN: 25
+  NEED+RESOURCE: 19

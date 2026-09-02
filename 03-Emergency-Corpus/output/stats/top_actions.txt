@@ -1,0 +1,17 @@
+TOP ACTION WORDS
+========================================
+help: 647
+need: 266
+donate: 239
+rescue: 152
+emergency: 147
+please help: 55
+assist: 52
+call: 47
+send: 46
+evacuate: 43
+urgent: 27
+move: 21
+immediately: 12
+escape: 8
+flee: 7

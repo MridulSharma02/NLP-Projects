@@ -1,0 +1,10 @@
+EMERGENCY CORPUS — STATISTICS SUMMARY
+========================================
+total_messages: 5025
+avg_word_count: 26.38
+avg_sentence_count: 1.99
+avg_location_count: 0.9
+avg_action_count: 0.36
+messages_with_location: 2739
+messages_with_action: 1326
+informal_messages: 3587

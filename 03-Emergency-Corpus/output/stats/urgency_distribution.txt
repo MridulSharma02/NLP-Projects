@@ -1,0 +1,5 @@
+URGENCY DISTRIBUTION
+========================================
+low: 3621
+medium: 1371
+high: 33

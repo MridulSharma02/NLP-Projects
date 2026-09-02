@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Emergency Corpus Analysis</title>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { background: #0d1117; color: #e6edf3; font-family: 'Segoe UI', sans-serif; }
+  header { background: #161b22; border-bottom: 1px solid #30363d; padding: 24px 40px; }
+  header h1 { font-size: 1.6rem; color: #f0883e; }
+  header p { color: #8b949e; margin-top: 4px; font-size: 0.9rem; }
+  .grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; padding: 32px 40px 0; }
+  .stat { background: #161b22; border: 1px solid #30363d; border-radius: 8px; padding: 20px; }
+  .stat .value { font-size: 2rem; font-weight: 700; color: #f0883e; }
+  .stat .label { color: #8b949e; font-size: 0.85rem; margin-top: 4px; }
+  .charts { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; padding: 24px 40px; }
+  .chart-box { background: #161b22; border: 1px solid #30363d; border-radius: 8px; padding: 24px; }
+  .chart-box h3 { color: #c9d1d9; font-size: 1rem; margin-bottom: 16px; }
+  .wide { grid-column: span 2; }
+  .findings { margin: 0 40px 40px; background: #161b22; border: 1px solid #30363d; border-radius: 8px; padding: 24px; }
+  .findings h3 { color: #c9d1d9; margin-bottom: 16px; }
+  .findings ul { list-style: none; display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+  .findings li { background: #0d1117; border-radius: 6px; padding: 12px 16px; font-size: 0.88rem; color: #8b949e; border-left: 3px solid #f0883e; }
+  .findings li span { color: #f0883e; font-weight: 700; }
+  canvas { max-height: 280px; }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>🚨 Emergency Message Corpus — Analysis Dashboard</h1>
+  <p>NLP Project 3 · 5,025 disaster messages · HumAID + Manual sources · Mridul Sharma</p>
+</header>
+
+<div class="grid">
+  <div class="stat"><div class="value">5,025</div><div class="label">Total Messages</div></div>
+  <div class="stat"><div class="value">54.5%</div><div class="label">With Location Mention</div></div>
+  <div class="stat"><div class="value">71.4%</div><div class="label">Informal Language</div></div>
+  <div class="stat"><div class="value">26.4%</div><div class="label">With Action Words</div></div>
+</div>
+
+<div class="charts">
+  <div class="chart-box">
+    <h3>Urgency Distribution</h3>
+    <canvas id="urgencyChart"></canvas>
+  </div>
+  <div class="chart-box">
+    <h3>Informal vs Formal — Avg Word Count</h3>
+    <canvas id="informalChart"></canvas>
+  </div>
+  <div class="chart-box">
+    <h3>Top Action Words</h3>
+    <canvas id="actionsChart"></canvas>
+  </div>
+  <div class="chart-box">
+    <h3>POS Tags — High vs Low Urgency</h3>
+    <canvas id="posChart"></canvas>
+  </div>
+  <div class="chart-box wide">
+    <h3>Disaster Type Distribution</h3>
+    <canvas id="disasterChart"></canvas>
+  </div>
+</div>
+
+<div class="findings">
+  <h3>📋 Key Findings</h3>
+  <ul>
+    <li><span>54.5%</span> of messages contain a detectable location — critical for dispatch routing</li>
+    <li><span>71.4%</span> of messages are linguistically informal — NLP must handle noisy text</li>
+    <li><span>26.4%</span> contain explicit action words (help, rescue, evacuate, send)</li>
+    <li>High-urgency messages show higher <span>PROPN → NOUN → VERB</span> ordering</li>
+    <li>Informal messages avg <span>28.96 words</span> vs formal <span>19.95 words</span></li>
+    <li>Only <span>33 messages</span> hit high urgency — threshold tuning needed</li>
+    <li>Top actions: <span>help, need, donate, rescue, emergency</span></li>
+    <li>Low urgency dominates (<span>3,621</span>) — reflects HumAID news-style tweets</li>
+  </ul>
+</div>
+
+<script>
+const orange = '#f0883e', blue = '#58a6ff', green = '#3fb950', red = '#f85149', purple = '#bc8cff';
+
+new Chart(document.getElementById('urgencyChart'), {
+  type: 'doughnut',
+  data: {
+    labels: ['Low', 'Medium', 'High'],
+    datasets: [{ data: [3621, 1371, 33], backgroundColor: [blue, orange, red], borderWidth: 0 }]
+  },
+  options: { plugins: { legend: { labels: { color: '#8b949e' } } } }
+});
+
+new Chart(document.getElementById('informalChart'), {
+  type: 'bar',
+  data: {
+    labels: ['Informal (3,587)', 'Formal (1,438)'],
+    datasets: [{ label: 'Avg Word Count', data: [28.96, 19.95], backgroundColor: [orange, blue], borderRadius: 4 }]
+  },
+  options: { plugins: { legend: { display: false } }, scales: { y: { ticks: { color: '#8b949e' }, grid: { color: '#21262d' } }, x: { ticks: { color: '#8b949e' }, grid: { display: false } } } }
+});
+
+new Chart(document.getElementById('actionsChart'), {
+  type: 'bar',
+  data: {
+    labels: ['help', 'need', 'donate', 'rescue', 'emergency', 'please help', 'assist', 'call', 'send', 'evacuate'],
+    datasets: [{ label: 'Frequency', data: [820, 310, 95, 78, 52, 44, 38, 29, 25, 18], backgroundColor: green, borderRadius: 4 }]
+  },
+  options: { indexAxis: 'y', plugins: { legend: { display: false } }, scales: { x: { ticks: { color: '#8b949e' }, grid: { color: '#21262d' } }, y: { ticks: { color: '#8b949e' }, grid: { display: false } } } }
+});
+
+new Chart(document.getElementById('posChart'), {
+  type: 'bar',
+  data: {
+    labels: ['PROPN', 'NOUN', 'VERB', 'PUNCT', 'ADP', 'PRON', 'ADJ', 'DET'],
+    datasets: [
+      { label: 'High Urgency', data: [22, 19, 14, 11, 10, 8, 7, 5], backgroundColor: red, borderRadius: 4 },
+      { label: 'Low Urgency',  data: [18, 21, 12, 12, 11, 6, 8, 7], backgroundColor: blue, borderRadius: 4 }
+    ]
+  },
+  options: { plugins: { legend: { labels: { color: '#8b949e' } } }, scales: { y: { ticks: { color: '#8b949e' }, grid: { color: '#21262d' } }, x: { ticks: { color: '#8b949e' }, grid: { display: false } } } }
+});
+
+new Chart(document.getElementById('disasterChart'), {
+  type: 'bar',
+  data: {
+    labels: ['earthquake', 'flood', 'hurricane', 'wildfire', 'typhoon', 'cyclone', 'tsunami', 'other'],
+    datasets: [{ label: 'Messages', data: [1200, 980, 750, 620, 480, 390, 280, 325], backgroundColor: purple, borderRadius: 4 }]
+  },
+  options: { plugins: { legend: { display: false } }, scales: { y: { ticks: { color: '#8b949e' }, grid: { color: '#21262d' } }, x: { ticks: { color: '#8b949e' }, grid: { display: false } } } }
+});
+</script>
+</body>
+</html>

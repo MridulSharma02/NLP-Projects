@@ -1,0 +1,8 @@
+INFORMAL VS FORMAL ANALYSIS
+========================================
+informal_count: 3587
+formal_count: 1438
+informal_avg_words: 28.96
+formal_avg_words: 19.95
+informal_avg_actions: 0.36
+formal_avg_actions: 0.34
